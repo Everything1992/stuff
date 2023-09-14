@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Self Care is Essential in These Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6e6fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        article {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #e6e6fa;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Why Self Care is Essential in These Times</h1>
+    </header>
+    <article>
+        <p>Taking care of your body and mind is essential in these times. With the constant flow of information (that may or may not be accurate), most people are due for a reprieve from the environment.</p>
+        <h2>1. Turn Off Your Devices</h2>
+        <p>Social media has proven that as of late, most people are overwhelmed by the content that is put in front of them on a daily basis. To ease the mental blitz, it's advised that for better mental well-being, it's best to turn off your devices. If you can't do that, then try turning off your devices for at least 20 to 30 minutes in the morning.</p>
+        <h2>2. Places to Go to Recharge</h2>
+        <p>Sometimes it's as simple as staying home, cooking a meal with loved ones, shopping, or doing outdoor activities to relieve the stressors of the day.</p>
+        
+        <!-- Add the image with a link -->
+        <a href="https://www.pexels.com/photo/green-island-surrounded-by-picturesque-ocean-under-blue-sky-3845533/" target="_blank">
+            <img src="pexels-kelly-3845533.jpg" alt="Small oasis">
+        </a>
+
+        <!-- Email address as a mailto link -->
+        <p>Contact me at: <a href="mailto:ynasir1@mail.ccsf.edu">ynasir1@mail.ccsf.edu</a></p>
+        <!-- Website link -->
+        <p>Visit Caudalie: <a href="https://us.caudalie.com/c/all-products.html">caudalie.com</a></p>
+
+        <!-- Skincare Companies List -->
+        <h2>3. More Skin Care Companies</h2>
+        <ul>
+            <li><a href="https://www.vichyusa.com/bestsellers">Vichy</a></li>
+            <li><a href="https://zoskinhealth.com/">ZO SKIN</a></li>
+            <li><a href="https://us.nuxe.com/">Nuxe</a></li>
+        </ul>
+    </article>
+</body>
+</html>
