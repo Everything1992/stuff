@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8ff; /* Light Lavender */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #6699cc; /* Light Blue */
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #about {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    footer {
+      background-color: #6699cc; /* Light Blue */
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="assignments.html">Assignments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>My name is Yasmeen G Nasir. I am finishing up my requirements for cybersecurity.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I was born and raised in the Bay Area and I'm currently focused on finishing my requirements towards Cybersecurity. I'm proficient in cybersecurity tools and techniques.</p>
+    </section>
+  </main>
+
+  <footer>
+    </footer> 
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'YOUR_MEASUREMENT_ID');
+  </script>
+
+</body>
+</html>
