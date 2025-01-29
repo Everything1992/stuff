@@ -6,22 +6,24 @@
     <title>My Portfolio</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Arial', sans-serif; /* Modern font */
             margin: 0;
             padding: 0;
-            background-color: #f8f8ff; /* Light Lavender */
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         header {
-            background-color: #6699cc; /* Light Blue */
+            background-color: #007bff; /* Blue header */
             color: #fff;
             text-align: center;
             padding: 1rem 0;
             position: sticky;
             top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
         }
 
         nav ul {
@@ -32,13 +34,18 @@
 
         nav li {
             display: inline-block;
-            margin: 0 1rem;
+            margin: 0 1.5rem; /* Increased spacing */
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        nav a:hover {
+            color: #f0ad4e; /* Yellow on hover */
         }
 
         main {
@@ -46,39 +53,56 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            padding: 3rem; /* Increased padding */
         }
 
         section {
             margin-bottom: 2rem;
             text-align: center;
+            max-width: 800px; /* Set max width for content */
+        }
+
+        #hero {
+            background-color: #fff; /* White hero section */
+            padding: 2rem;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         h1 {
+            font-size: 2.5rem; /* Larger heading */
+            margin-bottom: 1rem;
+            color: #007bff; /* Blue heading */
+        }
+
+        h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
         }
 
         #about {
-            max-width: 600px;
-            margin: 0 auto;
+            background-color: #fff; /* White about section */
+            padding: 2rem;
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         footer {
-            background-color: #6699cc; /* Light Blue */
+            background-color: #333; /* Darker footer */
             color: #fff;
             text-align: center;
             padding: 1rem 0;
+            margin-top: auto; /* Push footer to bottom */
         }
     </style>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR_MEASUREMENT_ID"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EL54LB0R"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-YOUR_MEASUREMENT_ID'); // Replace with your actual Measurement ID
+      gtag('config', 'G-E7EL54LB0R');
     </script>
 
 </head>
