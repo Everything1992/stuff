@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 3 - Working with Images</title>
+
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYWE9QGVZV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYWE9QGVZV');
+    </script>  
+
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #5c6bc0; /* Soft lavender-blue */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Main Content Container */
+        .container {
+            width: 85%;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(92, 107, 192, 0.3); /* Soft lavender shadow */
+        }
+
+        /* Image Section */
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image:hover {
+            transform: scale(1.02); /* Slight zoom on hover */
+        }
+
+        /* Figcaption Styling */
+        figcaption {
+            text-align: center;
+            font-size: 1rem;
+            color: #444;
+            font-style: italic;
+        }
+
+        /* Description Section */
+        .description {
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 20px;
+            background-color: #e8eaf6; /* Soft lavender background */
+            border-left: 5px solid #5c6bc0; /* Lavender accent */
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        /* Links */
+        a {
+            color: #3949ab; /* Deep blue */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1a237e; /* Darker blue */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .image-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Working with Images
+    </header>
+
+    <main class="container">
+        <section class="image-section">
+            <figure>
+                <img src="imagesredwood.jpg" alt="Original Image" class="image">
+                <figcaption>Original Image - Width: YOUR_WIDTH px, Height: YOUR_HEIGHT px, Size: YOUR_SIZE bytes</figcaption>
+            </figure>
+
+            <figure>
+                <img src="imagesoceanviews.jpg" alt="Optimized Image" class="image">
+                <figcaption>Optimized Image - Width: YOUR_OPTIMIZED_WIDTH px, Height: YOUR_OPTIMIZED_HEIGHT px, Size: YOUR_OPTIMIZED_SIZE bytes</figcaption>
+            </figure>
+        </section>
+
+        <section class="description">
+            <p>
+                I used <a href="TOOL_URL" target="_blank">[Tool Name]</a> to optimize the image. 
+                After optimization, the file size was reduced from ORIGINAL_SIZE bytes to OPTIMIZED_SIZE bytes.
+                I checked the download speed using Chrome Developer Tools and noticed [mention improvements here, such as faster load time].
+            </p>
+        </section>
+    </main>
+</body>
+</html>
