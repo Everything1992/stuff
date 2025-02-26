@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Working with Grids</title>
+   <meta charset="utf-8">
+   <meta name="description" content="working with grids in CNIT 132A">
+   <style>
+      h1 { 
+         text-align: center;
+         font-style: italic;
+         margin-bottom: 20px; /* Adds space below the title */
+      }
+      .page-layout {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);  /* 4 equal-width columns */
+         gap: 10px; /* Space between the boxes */
+         width: 100%; /* Full width */
+         max-width: 1200px; /* Max width to avoid stretching too much */
+         margin: 0 auto; /* Centers the grid horizontally */
+      }
+      .news, .links, .search, .messages {
+         text-align: center;
+         font-weight: bold;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #f4f4f4;
+         border: 2px solid #333;
+         min-height: 200px;  /* Ensures all boxes have a minimum height */
+         height: 100%;  /* Ensures the height stretches properly */
+         aspect-ratio: 1;  /* Forces a square aspect ratio for the boxes */
+      }
+      .news {
+         background-color: cyan;
+      }
+      .links {
+         background-color: rgb(210, 185, 139);
+      }
+      .search {
+         background-color: rgb(246, 206, 246);
+      }
+      .messages {
+         background-color: rgb(241, 150, 150);
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+         .page-layout {
+            grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+         }
+      }
+      @media (max-width: 480px) {
+         .page-layout {
+            grid-template-columns: 1fr; /* 1 column on very small screens */
+         }
+      }
+   </style>
+</head>
+<body>
+   <h1>Company Template</h1>
+   <main class="page-layout">
+      <section class="news">
+         <h2>News</h2>
+         <p>Here we will present the latest news for you</p>
+      </section>
+      <section class="links">
+         <h2>Interesting Links</h2>
+         <p>Here you will see some interesting links</p>
+      </section>
+      <section class="search">
+         <h2>Search</h2>
+         <p>Here you will see some search functionality</p>
+      </section>
+      <section class="messages">
+         <h2>Messages</h2>
+         <p>Here you will see the latest messages received from our customers</p>
+      </section>
+   </main>
+</body>
+</html>
