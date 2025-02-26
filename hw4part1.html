@@ -10,14 +10,19 @@
          font-style: italic;
          margin-bottom: 20px; /* Adds space below the title */
       }
+
+      /* Main layout as a grid with two rows of two columns */
       .page-layout {
          display: grid;
-         grid-template-columns: repeat(4, 1fr);  /* 4 equal-width columns */
-         gap: 10px; /* Space between the boxes */
-         width: 100%; /* Full width */
-         max-width: 1200px; /* Max width to avoid stretching too much */
-         margin: 0 auto; /* Centers the grid horizontally */
+         grid-template-columns: 1fr 1fr; /* 2 equal-width columns */
+         grid-template-rows: 1fr 1fr;    /* 2 rows */
+         gap: 10px;                      /* Space between the boxes */
+         width: 100%;                    /* Full width */
+         max-width: 1200px;              /* Max width to avoid stretching too much */
+         margin: 0 auto;                 /* Centers the grid horizontally */
       }
+
+      /* Style for each section */
       .news, .links, .search, .messages {
          text-align: center;
          font-weight: bold;
@@ -27,10 +32,11 @@
          align-items: center;
          background-color: #f4f4f4;
          border: 2px solid #333;
-         min-height: 200px;  /* Ensures all boxes have a minimum height */
-         height: 100%;  /* Ensures the height stretches properly */
-         aspect-ratio: 1;  /* Forces a square aspect ratio for the boxes */
+         min-height: 200px; /* Minimum height for consistency */
+         height: 100%;      /* Ensures height stretches properly */
+         box-sizing: border-box; /* Includes padding and border in height calculation */
       }
+
       .news {
          background-color: cyan;
       }
@@ -44,10 +50,10 @@
          background-color: rgb(241, 150, 150);
       }
 
-      /* Responsive design */
+      /* Responsive design for smaller screens */
       @media (max-width: 768px) {
          .page-layout {
-            grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+            grid-template-columns: 1fr 1fr; /* Keep 2 columns for medium screens */
          }
       }
       @media (max-width: 480px) {
