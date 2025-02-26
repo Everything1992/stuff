@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>YGN Creative</title>
+   <style>
+      /* General styles for the page */
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      /* Header style */
+      header {
+         background-color: lightblue;
+         text-align: center;
+         padding: 10px 0;
+         font-size: 24px;
+         font-weight: bold;
+         color: #333;
+      }
+
+      /* Footer style */
+      footer {
+         background-color: lightblue;
+         text-align: center;
+         padding: 10px 0;
+         font-size: 14px;
+         margin-top: 20px; /* Add some space between content and footer */
+      }
+
+      /* Main container layout using flexbox */
+      .container {
+         display: flex;
+         justify-content: space-between; /* Arrange sections in a row */
+         gap: 20px; /* Space between the boxes */
+         padding: 20px;
+      }
+
+      /* Styles for each section */
+      .section {
+         padding: 20px;
+         border: 2px solid #ccc;
+         box-sizing: border-box; /* Ensures padding is included in the width */
+         flex: 1; /* All sections take equal space */
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      /* Assign different background colors to each section */
+      .news {
+         background-color: #ffb3b3; /* Light red */
+      }
+
+      .main {
+         background-color: #b3d9ff; /* Light blue */
+      }
+
+      .messages {
+         background-color: #ffffb3; /* Light yellow */
+      }
+
+      .challenge {
+         background-color: #c2f0c2; /* Light green */
+      }
+
+      /* Responsive design for small screens */
+      @media (max-width: 768px) {
+         .container {
+            flex-direction: column; /* Stack sections vertically on smaller screens */
+         }
+      }
+   </style>
+</head>
+<body>
+
+   <header>
+      YGN Creative
+   </header>
+
+   <!-- Main content container -->
+   <div class="container">
+      <!-- Aside 1 (with a unique color) -->
+      <div class="section news">
+         <h2>This is the aside 1</h2>
+         <p>Content for the first aside (sidebar).</p>
+      </div>
+
+      <!-- Main content area (centered between the two asides) -->
+      <div class="section main">
+         <h2>This is the main article of my page!</h2>
+         <p>In a 3-column layout, it should be shown in the middle between the aside 1 and aside 2!</p>
+      </div>
+
+      <!-- Aside 2 (with a unique color) -->
+      <div class="section messages">
+         <h2>This is the aside 2</h2>
+         <p>Content for the second aside (sidebar).</p>
+      </div>
+   </div>
+
+   <!-- Challenge content area (with old 2-column to 4-column challenge) -->
+   <div class="section challenge">
+      <h2>This column was created to have some content as a challenge to adapt the old 2-column layout to a 4-column layout.</h2>
+   </div>
+
+   <footer>
+      YGN Creative 2025.
+   </footer>
+
+</body>
+</html>
