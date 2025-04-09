@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 7 - Part 1</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: #C0DEED;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    .company-name {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 20px 0;
+      z-index: 10;
+      position: relative;
+    }
+
+    #sky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('clouds.png') center top repeat-x;
+      overflow: hidden;
+    }
+
+    /* Extra Cloud Layers */
+    .cloud {
+      position: absolute;
+      width: 200px;
+      opacity: 0.5;
+      animation: floatCloud 30s linear infinite;
+    }
+
+    .cloud1 { top: 20%; left: -250px; animation-delay: 0s; }
+    .cloud2 { top: 40%; left: -300px; animation-delay: 5s; }
+    .cloud3 { top: 60%; left: -400px; animation-delay: 10s; }
+
+    @keyframes floatCloud {
+      0% { left: -250px; }
+      100% { left: 110%; }
+    }
+
+    .plane {
+      position: absolute;
+      top: 50%;
+      left: -200px;
+      width: 150px;
+      animation: fly 10s linear infinite;
+      z-index: 2;
+    }
+
+    .banner {
+      position: absolute;
+      top: 30%;
+      left: -100%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      background-color: white;
+      padding: 10px 20px;
+      border: 2px solid #333;
+      animation: bannerMove 10s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    @keyframes fly {
+      0% { left: -200px; }
+      100% { left: 100%; }
+    }
+
+    @keyframes bannerMove {
+      0% {
+        left: -100%;
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        left: calc(50% - 150px);
+        transform: rotate(5deg) scale(1.2);
+      }
+      100% {
+        left: calc(50% - 150px);
+        transform: rotate(0deg) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="company-name">California Air</h1>
+
+  <div id="sky">
+    <!-- Extra cloud layers -->
+    <img src="cloud1.png" alt="cloud" class="cloud cloud1" />
+    <img src="cloud2.png" alt="cloud" class="cloud cloud2" />
+    <img src="cloud3.png" alt="cloud" class="cloud cloud3" />
+
+    <!-- Banner and plane -->
+    <div class="banner">FLY WITH US, WE ARE SAFE</div>
+    <img src="plane.png" alt="Flying Plane" class="plane" />
+  </div>
+</body>
+</html>
