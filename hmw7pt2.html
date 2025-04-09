@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 7 - Part 2</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      container-type: inline-size;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .house-img {
+      float: left;
+      shape-outside: url('house.png');
+      shape-margin: 20px;
+      width: 300px;
+      height: auto;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      clip-path: ellipse(48% 40% at 50% 50%);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Container query for h2 */
+    @container (max-width: 600px) {
+      h2 {
+        font-size: 1rem;
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>California Tiny Homes</h1>
+    <h2>Small Spaces, Big Possibilities</h2>
+
+    <img src="house.png" alt="Beautiful tiny home" class="house-img" />
+
+    <p>California's tiny home movement has taken off in recent years, offering innovative solutions for affordable housing, sustainable living, and minimalist lifestyles. These small but mighty homes are designed to maximize functionality while minimizing footprint — perfect for coastal retreats, urban infill lots, or off-grid escapes.</p>
+
+    <p>From sleek modern exteriors to smart interiors with convertible furniture and built-in storage, California tiny homes prove that living small doesn’t mean living less. Whether perched on wheels or nestled into a hillside, these homes represent a new way to live well — with less space, but far more freedom.</p>
+  </div>
+</body>
+</html>
