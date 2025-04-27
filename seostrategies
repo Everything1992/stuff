@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEO Strategies for Outdoor Activities, Skincare, and Food Delivery Insights</title>
+  <meta name="description" content="Discover the SEO strategies used to optimize web pages focusing on nature, skincare trends, and food delivery statistics.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Extra styling for SEO page only */
+    body {
+      background: linear-gradient(to right, #fce4ec, #e0f7fa); /* Pastel pink to light blue */
+      font-family: 'Poppins', sans-serif;
+      color: #555; /* Softer text */
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(135deg, #f8bbd0, #b2ebf2); /* Pastel pink to teal */
+      color: #444;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    main {
+      max-width: 1000px;
+      background: #fffafc; /* Creamy pastel background */
+      margin: 0 auto;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #64b5f6; /* Pastel blue headings */
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #ce93d8; /* Light purple underline */
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+    ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    a {
+      background-color: #ffccbc; /* Pastel peach button */
+      color: #333;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 2rem;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    a:hover {
+      background-color: #ffab91; /* Slightly darker pastel when hovered */
+      transform: translateY(-2px);
+    }
+    nav {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SEO Strategies for Outdoor Activities, Skincare, and Food Delivery Insights</h1>
+</header>
+
+<main>
+
+  <section>
+    <h2>Keyword Research & SEO Tools</h2>
+    <p>I  utilized <strong>Google Keyword Planner</strong> and <strong>Ubersuggest</strong> to find targeted SEO keywords for nature content, skincare products, and food delivery statistics.</p>
+    <ul>
+      <li>skincare tips</li>
+      <li>change in diet and effects on skin</li>
+      <li>skincare brands</li>
+      <li>current administration and budget constraints</li>
+      <li>buy now pay later apps for food delivery</li>
+      <li>alternative to expensive skincare brands</li>
+      <li>food delivery growth statistics 2025</li>
+      <li>role of local and government agencies for food</li>
+      <li>skincare hacks</li>
+      <li>impact of food delivery on a community</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>SEO Enhancements Implemented</h2>
+    <p>Each page was carefully updated to improve search engine visibility:</p>
+    <ul>
+      <li><strong>Title Tags:</strong> Unique, keyword-rich titles customized for each page theme.</li>
+      <li><strong>Meta Descriptions:</strong> Engaging summaries with primary keywords naturally integrated.</li>
+      <li><strong>Headings:</strong> Strategic use of H1 and H2 elements with selected keywords.</li>
+      <li><strong>Hyperlinks:</strong> Meaningful link text that enhances navigation and SEO.</li>
+      <li><strong>Image Alt Attributes:</strong> Descriptive alt text featuring keywords related to nature, skincare, and food delivery.</li>
+    </ul>
+  </section>
+
+  <nav>
+    <a href="assignments.html">← Return to Assignments Page</a>
+  </nav>
+
+</main>
+
+</body>
+</html>
