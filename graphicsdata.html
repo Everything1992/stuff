@@ -1,126 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Performance Metrics & User Acquisition (May 13 - June 9, 2022)</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1, h2, h3 {
-            color: #212529;
-        }
-        .metric {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 5px;
-            background-color: #fff;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-        }
-        .metric h2 {
-            margin-top: 0;
-            color: #007bff;
-        }
-        .example {
-            font-style: italic;
-            color: #6c757d;
-        }
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        img {
-            max-width: 80%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .callout {
-            background-color: #d1ecf1;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-            border: 1px solid #cce5ff;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .channel-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .channel-list li {
-            margin-bottom: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Metrics: Skincare, Capital One, Food Delivery Apps, and BNPL Trends</title>
+  <meta name="description" content="Explore user acquisition insights covering skincare advertising, Capital One card promotions, food delivery apps, and buy now pay later companies like Klarna.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W39GKTDVXL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W39GKTDVXL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(to right, #fce4ec, #e0f7fa);
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    h1 {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #0077cc;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .metric {
+      background: #f9fbfc;
+      border: 1px solid #d6e9f8;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .metric h2 {
+      color: #0077cc;
+    }
+    .example {
+      font-style: italic;
+      color: #666;
+      margin-top: 10px;
+    }
+    .image-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    iframe {
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+    .callout {
+      background-color: #d1f0f3;
+      padding: 20px;
+      margin: 30px 0;
+      border-radius: 15px;
+      text-align: center;
+    }
+    a {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .channel-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+    .channel-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .channel-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #0077cc;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .back-link a:hover {
+      background-color: #005fa3;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Website Performance Overview (May 13 - June 9, 2022)</h1>
 
-        <section class="metric">
-            <h2>Key Metrics</h2>
-            <p><b>Users (99K):</b> Total unique visitors.</p>
-            <p><b>New Users (86K):</b> First-time visitors.</p>
-            <p><b>Average Engagement Time (1m 37s):</b> Average session duration.</p>
-            <p class="example">Example: TikTok engagement rate for influencer content is around 18% (Note: This is an example and not directly comparable).</p>
-            <p><b>Total Revenue ($234K):</b> Total revenue generated.</p>
-        </section>
+<div class="container">
+  <h1>Website Metrics: Skincare, Capital One, Food Delivery Apps, and BNPL Trends (March 1st - May 30, 2025)</h1>
 
-        <section class="metric">
-            <h2>New User Acquisition Channels</h2>
-            <ul class="channel-list">
-                <li><b>Direct:</b> Users who directly type the website address or use a bookmark.</li>
-                <li><b>Organic Search:</b> Users who find the website through search engines (SEO is crucial).</li>
-                <li><b>Referral:</b> Users who arrive from links on other websites.</li>
-            </ul>
-            <p class="example">Example: Credit Karma's business model relies on referrals from embedded offers for credit cards, insurance, etc.</p>
-        </section>
+  <section class="metric">
+    <h2>Key Metrics Across Skincare and Finance Campaigns</h2>
+    <p><b>Users (99K):</b> Total unique visitors.</p>
+    <p><b>New Users (86K):</b> First-time visitors discovering our skincare offers and Capital One promotions.</p>
+    <p><b>Average Engagement Time (1m 37s):</b> User interaction levels across skincare ads, BNPL checkout offers, and food delivery app pages.</p>
+    <p class="example">Example: TikTok engagement rates on skincare influencer content can reach 18%.</p>
+    <p><b>Total Revenue ($234K):</b> Generated through credit card referrals, skincare sales, and food delivery partnerships.</p>
+  </section>
 
-        <section class="metric">
-            <h2>Understanding User vs. New User Counts</h2>
-            <p>The total "Users" (99K) includes both new and returning visitors, while "New Users" (86K) only counts first-time visitors. The difference highlights the number of returning users.</p>
-        </section>
+  <section class="metric">
+    <h2>User Acquisition via Food Delivery Apps, BNPL Offers, and Organic Search</h2>
+    <ul class="channel-list">
+      <li><b>Direct:</b> Returning users accessing skincare promotions or Capital One landing pages directly.</li>
+      <li><b>Organic Search:</b> SEO-driven discovery of BNPL options for food delivery.</li>
+      <li><b>Referral:</b> Traffic from platforms like Klarna, Afterpay, or skincare brand promos.</li>
+    </ul>
+    <p class="example">Example: <a href="https://www.creditkarma.com" target="_blank">Credit Karma</a> embeds Capital One offers within their app to drive referrals.</p>
+  </section>
 
-        <section class="metric">
-            <h2>Mobile User Identification</h2>
-            <p>While a significant portion of new users may be on mobile devices, it's important not to assume *all* are. Users access websites from various devices.</p>
-            <p>To accurately determine the number of mobile users, segment data within Google Analytics by "Device Category" (Mobile, Desktop, Tablet). This is essential for mobile optimization.</p>
-            <p class="example">Example: Personalized ads, like those for Caudalie skincare, appear across devices, indicating varied access points.</p>
-            <div class="image-container">
-                <img src="placeholder-image-1.jpg" alt="Google Shopping Example">
-            </div>
-        </section>
+  <section class="metric">
+    <h2>Understanding New User Trends</h2>
+    <p>Of 99K total users, 86K were new, indicating strong retention for skincare promotions and Capital One campaigns.</p>
+  </section>
 
-        <section class="callout">
-            <p>The Capital One QuicksilverOne card image (placeholder-image-2.jpg) is an example of a Credit Karma offer. Credit Karma earns revenue through these referrals.</p>
-            <div class="image-container">
-                <img src="images/Screenshot_11-2-2025_103924_www.capitalone.com.jpg" alt="Capital One QuicksilverOne Card">
-            </div>
-            <p>The Caudalie Skincare image (placeholder-image-3.jpg) is an example of a targeted ad that appears on various devices.</p>
-            <div class="image-container">
-                <img src="images/Screenshot_6-2-2025_75913_www.google.com.jpg" alt="Caudalie Skincare Ad">
-            </div>
-        </section>
+  <section class="metric">
+    <h2>Mobile Access Trends</h2>
+    <p>Mobile access is critical for skincare and BNPL checkout optimization. Segmentation by device is essential for precise ad targeting.</p>
+    <p class="example">Example: Klarna and Afterpay BNPL options integrated into food delivery checkout pages.</p>
+  </section>
 
+  <section class="metric">
+    <h2>Visual Insights</h2>
+
+    <div class="image-container">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/pGCra6i2gPQ" title="French Skincare" frameborder="0" allowfullscreen></iframe>
+      <p class="example">French skincare brands driving luxury online shopping experiences.</p>
     </div>
+
+    <div class="image-container">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/qTmxGMauptQ" title="Capital One Credit Card Offers" frameborder="0" allowfullscreen></iframe>
+      <p class="example">Capital One growing new user acquisition via BNPL promotions.</p>
+    </div>
+
+    <div class="image-container">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Jn2Qe8bswIA" title="Uber Eats Food Delivery Commercial" frameborder="0" allowfullscreen></iframe>
+      <p class="example">Uber Eats checkout boosting BNPL payment flexibility.</p>
+    </div>
+
+    <div class="image-container">
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/CrU2bRfzG0s" title="Klarna Buy Now Pay Later Explained" frameborder="0" allowfullscreen></iframe>
+      <p class="example">Klarna leading BNPL integrations for skincare and delivery industries.</p>
+    </div>
+  </section>
+
+  <section class="callout">
+    <p>Interested in learning more? Explore <a href="https://www.capitalone.com/credit-cards/" target="_blank">Capital One Cards</a>, <a href="https://www.afterpay.com/en-US" target="_blank">Afterpay BNPL</a>, and <a href="https://www.ubereats.com/" target="_blank">Uber Eats Delivery Services</a>.</p>
+  </section>
+
+  <div class="back-link">
+    <a href="https://everything1992.github.io/stuff/assign.html">← Return to Assignments Page</a>
+  </div>
+
+</div>
+
 </body>
 </html>
