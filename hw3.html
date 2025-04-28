@@ -1,167 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 3 - Working with Images</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 3 - Working with Images</title>
 
-    <!-- Google Analytics Tracking Code -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYWE9QGVZV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-PYWE9QGVZV');
-    </script>  
+  <!-- Google Analytics Tracking Code -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYWE9QGVZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PYWE9QGVZV');
+  </script>
 
-    <style>
-        /* General Page Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: #333;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fafafa;
+      color: #333;
+    }
 
-        /* Header Styling */
-        header {
-            background-color: #5c6bc0; /* Soft lavender-blue */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
+    /* Header Styling */
+    header {
+      background: linear-gradient(90deg, #5c6bc0, #7986cb);
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-bottom: 4px solid #3949ab;
+    }
 
-        /* Main Content Container */
-        .container {
-            width: 85%;
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(92, 107, 192, 0.3); /* Soft lavender shadow */
-        }
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Image Section */
-        .image-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            padding: 20px 0;
-        }
+    /* Image Section */
+    .image-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
 
-        .image {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
+    .image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.4s ease;
+    }
 
-        .image:hover {
-            transform: scale(1.02); /* Slight zoom on hover */
-        }
+    .image:hover {
+      transform: scale(1.03);
+    }
 
-        /* Figcaption Styling */
-        figcaption {
-            text-align: center;
-            font-size: 1rem;
-            color: #444;
-            font-style: italic;
-        }
+    figcaption {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-top: 10px;
+      font-style: italic;
+    }
 
-        /* Description Section */
-        .description {
-            text-align: center;
-            font-size: 1.1rem;
-            padding: 20px;
-            background-color: #e8eaf6; /* Soft lavender background */
-            border-left: 5px solid #5c6bc0; /* Lavender accent */
-            border-radius: 5px;
-            margin-top: 30px;
-        }
+    /* Description Section */
+    .description {
+      background-color: #eef1fa;
+      border-left: 6px solid #5c6bc0;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
 
-        /* Footer Styling */
-        footer {
-            background-color: #5c6bc0; /* Soft lavender-blue */
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 1rem;
-            margin-top: 40px;
-        }
+    .description a {
+      color: #3949ab;
+      font-weight: 600;
+    }
 
-        footer a {
-            color: #ffeb3b; /* Yellow for contrast */
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .description a:hover {
+      text-decoration: underline;
+      color: #1a237e;
+    }
 
-        footer a:hover {
-            text-decoration: underline;
-            color: #ff9800; /* Orange hover effect */
-        }
+    /* Footer */
+    footer {
+      background-color: #5c6bc0;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      font-size: 1rem;
+      border-top: 4px solid #3949ab;
+    }
 
-        /* Links */
-        a {
-            color: #3949ab; /* Deep blue */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        a:hover {
-            text-decoration: underline;
-            color: #1a237e; /* Darker blue */
-        }
+    footer a:hover {
+      color: #ffc107;
+      text-decoration: underline;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-            }
-
-            .image-section {
-                flex-direction: column;
-            }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        margin: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        Working with Images
-    </header>
 
-    <main class="container">
-        <section class="image-section">
-            <figure>
-                <img src="imagesredwoods.jpg" alt="Original Image" class="image">
-                <figcaption>Leonardo AI Image - Width: 1120 px, Height: 1120 px, Size: 982KB</figcaption>
-            </figure>
+  <header>
+    Working with Images
+  </header>
 
-            <figure>
-                <img src="imagesoceanviews.jpg" alt="Optimized Image" class="image">
-                <figcaption>Leonardo AI Image - Width: 1120 px, Height: 1120 px, Size: 890KB</figcaption>
-            </figure>
-        </section>
+  <main class="container">
+    <section class="image-section">
+      <figure>
+        <img src="imagesredwoods.jpg" alt="Original Image" class="image">
+        <figcaption>Leonardo AI Image - Width: 1120 px, Height: 1120 px, Size: 982KB</figcaption>
+      </figure>
 
-        <section class="description">
-            <p>
-                I used <a href="https://support.microsoft.com/en-us/photos" target="_blank">Microsoft Photos</a> to optimize the image. 
-                After optimization, the file size was reduced from <strong>982KB</strong> to <strong>890KB</strong>.
-                I checked the download speed using Chrome Developer Tools and noticed an improvement in page load time.
-            </p>
-        </section>
-    </main>
+      <figure>
+        <img src="imagesoceanviews.jpg" alt="Optimized Image" class="image">
+        <figcaption>Leonardo AI Image - Width: 1120 px, Height: 1120 px, Size: 890KB</figcaption>
+      </figure>
+    </section>
 
-    <!-- Footer Section -->
-    <footer>
-        &copy; 2025 Yasmeen Nasir | <a href="https://everything1992.github.io/stuff/advan.html">Back to Homepage</a>
-    </footer>
+    <section class="description">
+      <p>
+        I used <a href="https://leonardo.ai/" target="_blank">Leonardo AI</a> to optimize the image.
+        After optimization, the file size was reduced from <strong>982KB</strong> to <strong>890KB</strong>.
+        I checked the download speed using Chrome Developer Tools and noticed a faster page load time.
+      </p>
+    </section>
+
+    <section class="description">
+      <p>
+        Due to budget cuts affecting Parks and Recreation services this summer, finding open trails may be more difficult.
+        If you're planning a visit, I recommend using 
+        <a href="https://www.redwoodhikes.com/" target="_blank">🌲 RedwoodHikes.com</a> for the latest redwood forest trail updates.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Yasmeen Nasir | <a href="https://everything1992.github.io/stuff/advan.html">Back to Homepage</a>
+  </footer>
 
 </body>
 </html>
