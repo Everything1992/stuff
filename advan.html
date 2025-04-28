@@ -1,137 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif; /* Modern font */
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light gray background */
-            color: #333; /* Dark gray text */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yasmeen Nasir - Portfolio</title>
 
-        header {
-            background-color: #007bff; /* Blue header */
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-        }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EL54LB0R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E7EL54LB0R');
+  </script>
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+  <!-- Pastel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
-        nav li {
-            display: inline-block;
-            margin: 0 1.5rem; /* Increased spacing */
-        }
+  <style>
+    body {
+      font-family: 'Quicksand', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe4ec, #e0f7fa); /* pastel pink to pastel blue */
+      color: #444;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
+    header {
+      background: #b2ebf2; /* pastel teal */
+      color: #333;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        nav a:hover {
-            color: #f0ad4e; /* Yellow on hover */
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
 
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 3rem; /* Increased padding */
-        }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-        section {
-            margin-bottom: 2rem;
-            text-align: center;
-            max-width: 800px; /* Set max width for content */
-        }
+    nav a:hover {
+      color: #ff80ab; /* pastel rose */
+    }
 
-        #hero {
-            background-color: #fff; /* White hero section */
-            padding: 2rem;
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
+    main {
+      flex: 1;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
 
-        h1 {
-            font-size: 2.5rem; /* Larger heading */
-            margin-bottom: 1rem;
-            color: #007bff; /* Blue heading */
-        }
+    section {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+    h1 {
+      font-size: 2.8rem;
+      color: #64b5f6; /* pastel blue heading */
+      margin-bottom: 1rem;
+    }
 
-        #about {
-            background-color: #fff; /* White about section */
-            padding: 2rem;
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #64b5f6;
+    }
 
-        footer {
-            background-color: #333; /* Darker footer */
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: auto; /* Push footer to bottom */
-        }
-    </style>
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 0;
+      color: #555;
+    }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7EL54LB0R"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-E7EL54LB0R');
-    </script>
-
+    footer {
+      background: #c8e6c9; /* pastel green */
+      color: #444;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      margin-top: auto;
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="https://everything1992.github.io/stuff/assign.html">Assignments</a></li>
-                <li><a href="https://everything1992.github.io/stuff/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="https://everything1992.github.io/stuff/assign.html">Assignments</a></li>
+      <li><a href="https://everything1992.github.io/stuff/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main>
-        <section id="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>My name is Yasmeen G Nasir. I am finishing up my requirements for Cybersecurity.</p>
-        </section>
+<main>
+  <section id="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <p>I'm Yasmeen G. Nasir, I current work in cybersecurity. Dedicated to protecting digital spaces and finishing my academic journey.</p>
+  </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am born and raised in the Bay Area and I'm currently focused on finishing my requirements towards Cybersecurity. I'm proficient in cybersecurity tools and techniques.</p>
-        </section>
-    </main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Born and raised in the Bay Area, I am passionate about cybersecurity, technology, and innovation. I am proficient with cybersecurity tools, best practices, and methodologies essential for today's digital world.</p>
+  </section>
+</main>
 
-    <footer>
-    </footer> 
+<footer>
+  &copy; 2025 Yasmeen Nasir | Proudly Made with 💻
+</footer>
 
 </body>
 </html>
