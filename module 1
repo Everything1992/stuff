@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eating Psychology Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.95rem; /* Slightly smaller base font size */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Styles for the content within the module */
+        .prose h3 {
+            font-weight: 600;
+            color: #6B46C1; /* A shade of purple */
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        .prose li {
+            margin-bottom: 0.5rem;
+        }
+        /* Sticky sidebar on larger screens */
+        @media (min-width: 1024px) {
+            .sticky-top-4 {
+                position: sticky;
+                top: 1rem; /* Adjust as needed */
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-100 to-pink-100 text-gray-900">
+
+    <header class="bg-white shadow-md p-4 md:p-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-purple-800 mb-2">
+            Psyc of Eating, Food, & Weight 
+        </h1>
+        <p class="text-md md:text-lg text-gray-600">
+            Exploring the Mind-Body Connection with Food
+        </p>
+    </header>
+
+    <div class="container mx-auto p-4 md:p-8 flex flex-col lg:flex-row gap-6">
+        <nav id="sidebar-nav" class="lg:w-1/4 bg-white rounded-xl shadow-lg p-4 h-fit sticky-top-4">
+            <h2 class="text-xl font-bold text-purple-700 mb-4 border-b pb-2">Modules</h2>
+            <ul class="space-y-2" id="module-list">
+                </ul>
+        </nav>
+
+        <main class="lg:w-3/4 bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 id="module-title" class="text-2xl md:text-3xl font-bold text-purple-800 mb-4 pb-2 border-b">
+                </h2>
+            <div id="module-content" class="prose max-w-none text-gray-700 leading-relaxed">
+                </div>
+        </main>
+    </div>
+
+    <footer class="text-center p-4 text-gray-600">
+        <p>&copy; <span id="current-year"></span> YGN. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Define module data
+        const modules = [
+            {
+                id: 1,
+                title: 'Module 1: Introduction to Eating Psychology',
+                content: `
+                    <p class="text-gray-700 mb-4">This module explores the foundational concepts of eating psychology, delving into how our thoughts, emotions, and beliefs influence our eating behaviors. We'll discuss the interplay between mind and body in the context of food choices and body image.</p>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Key Topics:</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>The biopsychosocial model of eating</li>
+                        <li>Understanding hunger and satiety cues</li>
+                        <li>Emotional eating vs. physical hunger</li>
+                        <li>Introduction to mindful eating principles</li>
+                    </ul>
+                    <p class="mt-4 text-gray-700">Assignments for this module include a reflective journal on personal eating habits and a short essay on the psychological aspects of food cravings.</p>
+                `,
+            },
+            {
+                id: 2,
+                title: 'Module 2: Under Construction',
+                content: `
+                    <p class="text-gray-700 mb-4">This module is currently **under construction**. Please check back soon for more content on The Psychology of Hunger and Satiety!</p>
+                    <img src="https://via.placeholder.com/400x200?text=Module+2+Coming+Soon" alt="Under Construction" class="mx-auto my-4 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-center">We're working hard to bring you valuable insights into the intricate mechanisms of hunger and satiety.</p>
+                `,
+            },
+            {
+                id: 3,
+                title: 'Module 3: Under Construction',
+                content: `
+                    <p class="text-gray-700 mb-4">This module is currently **under construction**. Please check back soon for more content on Emotional Eating and Coping Mechanisms!</p>
+                    <img src="https://via.placeholder.com/400x200?text=Module+3+Coming+Soon" alt="Under Construction" class="mx-auto my-4 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-center">We're preparing comprehensive materials on identifying triggers and developing healthier coping strategies.</p>
+                `,
+            },
+            {
+                id: 4,
+                title: 'Module 4: Under Construction',
+                content: `
+                    <p class="text-gray-700 mb-4">This module is currently **under construction**. Please check back soon for more content on Body Image and Self-Acceptance!</p>
+                    <img src="https://via.placeholder.com/400x200?text=Module+4+Coming+Soon" alt="Under Construction" class="mx-auto my-4 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-center">Our team is diligently working on content to help cultivate a positive and accepting body image.</p>
+                `,
+            },
+            {
+                id: 5,
+                title: 'Module 5: Under Construction',
+                content: `
+                    <p class="text-gray-700 mb-4">This module is currently **under construction**. Please check back soon for more content on Mindful Eating Practices!</p>
+                    <img src="https://via.placeholder.com/400x200?text=Module+5+Coming+Soon" alt="Under Construction" class="mx-auto my-4 rounded-lg shadow-md">
+                    <p class="text-gray-600 text-center">Get ready to explore the principles and benefits of mindful eating for a healthier relationship with food.</p>
+                `,
+            }
+        ];
+
+        // Get DOM elements
+        const moduleList = document.getElementById('module-list');
+        const moduleTitle = document.getElementById('module-title');
+        const moduleContent = document.getElementById('module-content');
+        const currentYearSpan = document.getElementById('current-year');
+
+        let selectedModuleId = 1; // Default to Module 1
+
+        // Function to render module content
+        function renderModule(moduleId) {
+            const module = modules.find(m => m.id === moduleId);
+            if (module) {
+                moduleTitle.textContent = module.title;
+                moduleContent.innerHTML = module.content;
+                // Update active button styling
+                const buttons = moduleList.querySelectorAll('button');
+                buttons.forEach(button => {
+                    const buttonModuleId = parseInt(button.dataset.moduleId);
+                    if (buttonModuleId === moduleId) {
+                        button.classList.add('bg-purple-600', 'text-white', 'shadow-md');
+                        button.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-purple-200', 'hover:text-purple-800');
+                    } else {
+                        button.classList.remove('bg-purple-600', 'text-white', 'shadow-md');
+                        button.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-purple-200', 'hover:text-purple-800');
+                    }
+                });
+            }
+        }
+
+        // Function to create module navigation buttons
+        function createModuleButtons() {
+            modules.forEach(module => {
+                const listItem = document.createElement('li');
+                const button = document.createElement('button');
+                button.className = `
+                    w-full text-left p-3 rounded-lg transition-all duration-200
+                    bg-gray-100 text-gray-700 hover:bg-purple-200 hover:text-purple-800
+                    focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50
+                `;
+                button.dataset.moduleId = module.id; // Store module ID
+                button.innerHTML = `<span class="font-semibold">Module ${module.id}:</span> ${module.title.split(': ')[1]}`;
+                button.addEventListener('click', () => {
+                    selectedModuleId = module.id;
+                    renderModule(selectedModuleId);
+                });
+                listItem.appendChild(button);
+                moduleList.appendChild(listItem);
+            });
+        }
+
+        // Initialize the page when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            createModuleButtons();
+            renderModule(selectedModuleId); // Render the first module by default
+            currentYearSpan.textContent = new Date().getFullYear(); // Set current year in footer
+        });
+    </script>
+
+</body>
+</html>
