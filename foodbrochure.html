@@ -13,25 +13,30 @@
             background-color: #f0f4f8; /* Softer, very light blue-gray background */
             color: #334155; /* Darker slate gray text */
             line-height: 1.7; /* Slightly more relaxed line height */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex;
+            flex-direction: column;
         }
         .container {
             max-width: 1200px;
         }
-        .panel {
+        /* Base panel styling for internal sections within brochure columns */
+        .brochure-panel {
             background-color: #ffffff; /* White background for panels */
             border-radius: 1.25rem; /* Slightly less rounded corners for sleekness */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Lighter, more diffused shadow */
-            padding: 3rem; /* Generous padding */
-            margin-bottom: 2.5rem; /* Consistent spacing between panels */
+            padding: 2rem; /* Adjusted padding for columns */
+            margin-bottom: 2.5rem; /* For stacking on smaller screens */
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            justify-content: flex-start; /* Align content to top of column */
+            align-items: flex-start; /* Align text left by default */
+            text-align: left;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             border: 1px solid rgba(226, 232, 240, 0.6); /* Very subtle light border */
+            min-height: 600px; /* Gives the brochure "page" a consistent height */
         }
-        .panel:hover {
+        .brochure-panel:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow on hover */
         }
@@ -58,7 +63,7 @@
         }
         .image-container {
             width: 100%;
-            height: 280px; /* Slightly taller images */
+            height: 200px; /* Slightly shorter images for tighter column fit */
             overflow: hidden;
             border-radius: 1rem;
             margin-bottom: 1.75rem;
@@ -96,7 +101,7 @@
             border-top-left-radius: 2.5rem;
             border-top-right-radius: 2.5rem;
             text-align: center;
-            margin-top: 3rem;
+            margin-top: auto; /* Push footer to the bottom */
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
         }
         .contact-info a {
@@ -108,24 +113,39 @@
             color: #e2e8f0; /* Very light gray on hover */
             text-decoration: underline;
         }
-        /* Responsive adjustments for panels */
-        @media (min-width: 768px) { /* Medium screens and up */
-            .panel {
-                padding: 4rem;
-            }
-            .grid-cols-2 > .panel { /* Specific for two-column grid */
-                max-width: calc(50% - 1.25rem); /* Adjust for margin-right */
-            }
-        }
         /* Further styling for quote blocks */
         blockquote {
             border-left: 4px solid #3CB371; /* Accent color for quotes */
             padding-left: 1.5rem;
             text-align: left; /* Align quote text left */
+            margin-bottom: 1rem; /* Spacing between quotes */
         }
         blockquote footer {
             text-align: right; /* Align footer of quote right */
             font-style: normal;
+        }
+
+        /* Responsive Grid Adjustments for Brochure Layout */
+        @media (min-width: 1024px) { /* On large screens and up, apply 3 columns */
+            main {
+                display: flex; /* Override main's default flex if needed */
+                justify-content: center;
+            }
+            #brochure-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+                gap: 2rem; /* Spacing between columns */
+                padding: 2.5rem; /* Padding around the entire brochure container */
+                background-color: #f0f4f8; /* Match body background */
+                border-radius: 1.5rem;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.1); /* Shadow for the whole brochure */
+                margin-top: 2.5rem; /* Margin below header */
+                width: 100%;
+            }
+            .brochure-panel {
+                margin-bottom: 0; /* Remove individual panel bottom margin when in grid */
+                height: auto; /* Allow panels to expand within column */
+            }
         }
     </style>
 </head>
@@ -138,130 +158,91 @@
                 Nourishing A Future: <br class="sm:hidden"> Addressing Food Insecurity
             </h1>
             <p class="text-xl sm:text-2xl font-light opacity-90">
-               How food insecurity impacts a specifc demographic or geographic group that you are a part of.
+                How food insecurity impacts a specific demographic or geographic group that you are a part of.
             </p>
         </div>
     </header>
 
     <main class="container mx-auto mt-10 px-4">
+        <div id="brochure-container" class="lg:grid lg:grid-cols-3 lg:gap-8 lg:p-8">
 
-        <!-- Panel 2: What is Food Insecurity? / Inside Flap -->
-        <section class="panel text-center">
-            <h2 class="text-4xl section-title">What is Food Insecurity?</h2>
-            <div class="image-container max-w-2xl">
-                <img src="imagesfooddesert.jpg">
-            </div>
-            <p class="text-xl mb-4 max-w-3xl">
-                Food insecurity is defined as a household's limited or uncertain access to adequate food for an active, healthy life. It's not just about hunger; it's about the consistent availability of nutritious and safe food.
-            </p>
-            <p class="text-xl font-semibold max-w-3xl text-gray-700">
-                In many rural communities across [Your State], X% of households with young children experience food insecurity annually, a rate significantly higher than urban areas. This highlights a critical need for targeted support.
-            </p>
-        </section>
+            <!-- Brochure Column 1: What is Food Insecurity? (Condensed) -->
+            <section class="brochure-panel">
+                <h2 class="text-3xl section-title text-center w-full">What is Food Insecurity?</h2>
+                <div class="image-container">
+                    <img src=".">
+                </div>
+                <p class="text-lg mb-4">
+                    Food insecurity is defined as a household's limited or uncertain access to adequate food for an active, healthy life. It's more than just hunger; it's about the consistent availability of nutritious and safe food.
+                </p>
+                <p class="text-lg font-semibold text-gray-700">
+                    In many rural communities across [Your State], a significant percentage of households with young children experience food insecurity annually. This rate is often higher than in urban areas, highlighting a critical need for targeted support.
+                </p>
+            </section>
 
-        <!-- Panel 3: The Silent Struggle in Rural [Your State] / Inside Center Panel -->
-        <section class="panel text-center">
-            <h2 class="text-4xl section-title">The Silent Struggle in Rural [Your State]</h2>
-            <div class="image-container max-w-2xl">
-                <img src="https://placehold.co/800x350/A3B18A/586F45?text=Rural+Landscape+with+Scattered+Homes" alt="Image of a serene rural landscape with scattered homes, representing isolation and distance to resources.">
-            </div>
-            <p class="text-xl mb-8 max-w-3xl">
-                Food insecurity impacts families with young children in rural areas disproportionately due to a combination of unique challenges:
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl">
-                <div class="text-left p-6 rounded-xl bg-gray-50 shadow-sm flex flex-col justify-between flex-1">
+            <!-- Brochure Column 2: The Silent Struggle in Rural [Your State] -->
+            <section class="brochure-panel">
+                <h2 class="text-3xl section-title text-center w-full">The Silent Struggle in Rural [Your State]</h2>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x200/A3B18A/586F45?text=Rural+Community+Challenges" alt="Image representing rural community challenges.">
+                </div>
+                <p class="text-lg mb-6">
+                    Food insecurity disproportionately impacts rural families with young children due to unique challenges:
+                </p>
+                <div class="space-y-4">
                     <div>
-                        <h3 class="text-2xl sub-section-title">Limited Access to Stores</h3>
-                        <p class="text-lg">
-                            Many rural areas are "food deserts" with few full-service grocery stores. Families often rely on convenience stores, which offer fewer healthy options and higher prices, limiting nutritional choices.
+                        <h3 class="text-xl sub-section-title">Limited Access to Stores</h3>
+                        <p class="text-md">
+                            Many rural areas are "food deserts" with few full-service grocery stores. Families often rely on convenience stores, which offer fewer healthy options and higher prices.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sub-section-title">Transportation Barriers</h3>
+                        <p class="text-md">
+                            Long distances to supermarkets and a general lack of public transport make it difficult and costly to access fresh, affordable food without private vehicles.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sub-section-title">Economic Strain</h3>
+                        <p class="text-md">
+                            Lower-paying jobs and higher rates of poverty in rural communities mean tight household budgets, often leading to food being the first sacrifice.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl sub-section-title">Impact on Child Development</h3>
+                        <p class="text-md">
+                            Inconsistent nutrition in children leads to higher risks of developmental delays, chronic health issues, and difficulty concentrating in school.
                         </p>
                     </div>
                 </div>
-                <div class="text-left p-6 rounded-xl bg-gray-50 shadow-sm flex flex-col justify-between flex-1">
-                    <div>
-                        <h3 class="text-2xl sub-section-title">Transportation Barriers</h3>
-                        <p class="text-lg">
-                            Long distances to supermarkets and a general lack of public transportation make it difficult and costly for families to access fresh, affordable food without reliable private vehicles.
-                        </p>
-                    </div>
-                </div>
-                <div class="text-left p-6 rounded-xl bg-gray-50 shadow-sm flex flex-col justify-between flex-1">
-                    <div>
-                        <h3 class="text-2xl sub-section-title">Economic Strain</h3>
-                        <p class="text-lg">
-                            Lower-paying jobs, limited economic opportunities, and higher rates of poverty in rural communities mean tight household budgets where food is often the first sacrifice when other bills are due.
-                        </p>
-                    </div>
-                </div>
-                <div class="text-left p-6 rounded-xl bg-gray-50 shadow-sm flex flex-col justify-between flex-1">
-                    <div>
-                        <h3 class="text-2xl sub-section-title">Impact on Child Development</h3>
-                        <p class="text-lg">
-                            Children lacking consistent nutrition face higher risks of developmental delays, chronic health issues, and difficulty concentrating in school, significantly impacting their future potential and well-being.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Panel 4: Voices from Our Community / Inside Left Panel -->
-        <section class="panel text-center">
-            <h2 class="text-4xl section-title">Voices from Our Community</h2>
-            <div class="image-container max-w-2xl">
-                <img src="https://placehold.co/800x350/C8D7A4/768E65?text=Supportive+Community+Gathering" alt="Image of a diverse community gathering, showing support and connection.">
-            </div>
-            <p class="text-xl mb-8 max-w-3xl">
-                The statistics tell a story, but the voices of our neighbors reveal the daily realities:
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl">
-                <blockquote class="text-lg italic bg-gray-50 p-8 rounded-xl shadow-sm flex flex-col justify-between">
-                    <p class="mb-4">"Sometimes it's just a choice between paying the electric bill or buying groceries for the week. It's a constant worry that keeps me up at night."</p>
-                    <footer class="mt-auto text-md font-semibold text-gray-600">— A single mother from [Rural County Name]</footer>
+            <!-- Brochure Column 3: Voices & How You Can Help -->
+            <section class="brochure-panel">
+                <h2 class="text-3xl section-title text-center w-full">Voices & Action</h2>
+                <div class="image-container">
+                    <img src="https://placehold.co/800x200/C8D7A4/768E65?text=Community+Support" alt="Image of a diverse community gathering, showing support and connection.">
+                </div>
+                <p class="text-lg mb-4">
+                    The statistics tell a story, but the voices of our neighbors reveal the daily realities:
+                </p>
+                <blockquote class="text-md italic mb-4">
+                    <p>"Sometimes it's just a choice between paying the electric bill or buying groceries for the week. It's a constant worry that keeps me up at night."</p>
+                    <footer class="text-sm font-semibold text-gray-600 mt-2">— A single mother from [Rural County/Area]</footer>
                 </blockquote>
-                <blockquote class="text-lg italic bg-gray-50 p-8 rounded-xl shadow-sm flex flex-col justify-between">
-                    <p class="mb-4">"We have fresh produce from our garden in summer, but winter is really tough. The nearest supermarket is an hour away, and gas costs a fortune just to get there."</p>
-                    <footer class="mt-auto text-md font-semibold text-gray-600">— A farming family in [Another Rural Area]</footer>
+                <blockquote class="text-md italic mb-6">
+                    <p>"We have fresh produce from our garden in summer, but winter is really tough. The nearest supermarket is an hour away, and gas costs a fortune."</p>
+                    <footer class="text-sm font-semibold text-gray-600 mt-2">— A farming family in [Rural County/Area]</footer>
                 </blockquote>
-            </div>
-            <p class="text-xl mt-8 max-w-3xl text-gray-700">
-                These personal experiences underscore the urgent need for accessible and sustainable solutions to food insecurity.
-            </p>
-        </section>
+                <h3 class="text-2xl sub-section-title text-center w-full mt-auto">How You Can Help</h3>
+                <div class="space-y-4 w-full">
+                    <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank" class="button w-full text-center">Donate & Volunteer</a>
+                    <a href="#" class="button w-full text-center">Advocate for Change</a>
+                    <a href="#" class="button w-full text-center">Spread Awareness</a>
+                </div>
+            </section>
 
-        <!-- Panel 5: Take Action / Back Panel -->
-        <section class="panel text-center">
-            <h2 class="text-4xl section-title">How You Can Help</h2>
-            <p class="text-xl mb-8 max-w-3xl">
-                Addressing food insecurity requires a collective effort. Here's how you can make a tangible difference in [Your State]'s rural communities and beyond:
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-5xl">
-                <div class="p-8 bg-green-50 rounded-xl shadow-md flex flex-col items-center flex-1">
-                    <h3 class="text-2xl sub-section-title mb-4">Donate & Volunteer</h3>
-                    <p class="text-lg mb-6">
-                        Support local food banks and pantries serving rural areas. Your monetary donations provide flexibility, and your time makes a direct impact.
-                    </p>
-                    <a href="https://www.feedingamerica.org/find-your-local-foodbank" target="_blank" class="button">Find a Food Bank</a>
-                </div>
-                <div class="p-8 bg-green-50 rounded-xl shadow-md flex flex-col items-center flex-1">
-                    <h3 class="text-2xl sub-section-title mb-4">Advocate for Change</h3>
-                    <p class="text-lg mb-6">
-                        Contact your elected officials to support policies that improve food access, strengthen rural infrastructure, and create equitable economic opportunities.
-                    </p>
-                    <a href="#" class="button">Learn About Policies</a>
-                </div>
-                <div class="p-8 bg-green-50 rounded-xl shadow-md flex flex-col items-center flex-1">
-                    <h3 class="text-2xl sub-section-title mb-4">Spread Awareness</h3>
-                    <p class="text-lg mb-6">
-                        Share this information with your network and engage in conversations about food insecurity. Education is the first step toward lasting change.
-                    </p>
-                    <a href="#" class="button">Share Now</a>
-                </div>
-            </div>
-            <p class="text-xl mt-10 max-w-3xl text-gray-700">
-                Together, we can cultivate a future where every child and family in [Your State]'s rural areas has consistent access to the nutritious food they need to thrive.
-            </p>
-        </section>
-
+        </div>
     </main>
 
     <!-- Panel 6: Footer / Address Panel -->
