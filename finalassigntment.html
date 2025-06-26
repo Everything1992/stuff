@@ -7,7 +7,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter and Oswald -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Custom styles */
         body {
@@ -116,6 +116,23 @@
             object-fit: cover; /* Cover the container without distortion */
             display: block; /* Remove extra space below image */
         }
+        /* Style for images inserted within text flow */
+        .inline-image-container {
+            width: 100%;
+            max-width: 300px; /* Smaller max width for inline images */
+            height: 200px; /* Fixed height for consistency */
+            overflow: hidden;
+            border-radius: 0.75rem; /* Rounded corners */
+            margin: 1.5rem auto; /* Center and add vertical spacing */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow */
+            display: block; /* Ensure it behaves as a block for margin: auto */
+        }
+        .inline-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -124,7 +141,7 @@
         <h1>Eating Disorders: How Culture & Social Media Create Them</h1>
 
         <div class="hero-image-container">
-            <img src="images6victoria.jpg" alt="Abstract image representing cultural influence on body image">
+            <img src="https://placehold.co/600x300/8B5CF6/FFFFFF?text=Culture+%26+Body+Image" alt="Abstract image representing cultural influence on body image">
         </div>
 
         <p class="text-gray-700 leading-relaxed mb-4 text-center">
@@ -140,7 +157,13 @@
             The Netflix documentary detailing the Dallas Cowboys Cheerleaders' process of choosing and eliminating prospective candidates for the squad encapsulates many of the issues addressed in this class. In an episode in Season 1, Kelli Finglass (Director of the Dallas Cowboys Cheerleaders) repeatedly emphasized and visibly conveyed her desire for a "petite & proportionate" look for the Dallas Cowboys Cheerleader costumes. Kelli and others on the administrative panel made clear that this "ideal aesthetic" should be the foundation of "privilege" to wear that DCC uniform.
         </p>
         <p class="text-gray-700 leading-relaxed">
-            Conversely, even within cultures that traditionally celebrate different body types (like the "soda bottle" shape in some African American and Brazilian communities, as discussed in our studies), the global reach of Western media can introduce conflicting ideals, creating confusion and dissatisfaction. The emphasis shifts from appreciating natural diversity to striving for a singular, often genetically unrealistic, aesthetic.
+            As I was playing this series in the background while doing this final assignment, I was also revisiting my notes from Lindo Bacon, PhD's book. The cultures are different, but the results for the communities within them are the same: a group of people feels the need to offer themselves up to a culture that tells them they are not good enough until they "submit" in totality is crippling to the self-esteem.
+        </p>
+        <div class="inline-image-container">
+            <img src="https://placehold.co/300x200/D0B8E2/6B46C1?text=Lindo+Bacon" alt="Image of Lindo Bacon">
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+            In the 2010s, the Dallas Cowboys Cheerleaders would be weighed often. The uniforms are fitted to the body, so if their weight fluctuates, they would be ridiculed and questioned about their eating habits. Bacon has been vocal about his own struggles about body image. Bacon is thorough about the constant state of 'doubt': Do I look okay? Do I sound okay? Will they like me? Do they accept me in this room? Oddly, Ava from Season 2 Episode 1 said the same thing – not knowing what to do when trying to navigate a system that does not value you, but only the image of you.
         </p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/KCcKw40dqfI" title="YouTube video player: The Unrealistic Body Ideal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -196,7 +219,8 @@
             <li><a href="https://www.instyle.com/dallas-cowboys-cheerleaders-salary-11757979" target="_blank">How Much Do the Dallas Cowboys Cheerleaders Make? What 'America's Sweethearts' Season 2 Revealed - InStyle</a> - Article detailing the DCC's salary increase.</li>
             <li><a href="https://www.youtube.com/watch?v=mDVlgocANg0" target="_blank">Dallas Cowboys Cheerleader Victoria Kalina on Mental Health, Body Image, & What's Next - Real Pod (YouTube)</a> - Podcast interview on mental health and body image in professional cheerleading.</li>
             <li><a href="https://www.dailyutahchronicle.com/2024/07/11/americas-sweethearts-dallas-cowboys-cheerleaders-to-cheer-or-not-to-cheer/" target="_blank">The ugly process of turning beautiful women into Dallas Cowboys Cheerleaders | The Daily Utah Chronicle</a> - A critical look at beauty standards in professional cheerleading.</li>
-            <li><a href="https://www.youtube.com/watch?v=cIRnnMPesso" target="_blank">ThinTok (YouTube)</a> - Video on cultural norms and expectations.</li>
+            <li><a href="https://www.youtube.com/watch?v=cIRnnMPesso" target="_blank">Wolter's World: What NOT to do in France! (YouTube)</a> - Video on cultural norms and expectations.</li>
+            <li><a href="https://www.youtube.com/watch?v=YC0I0jqFa8o" target="_blank">Afro-Brazilian Street Food (YouTube)</a> - Video on cultural food experiences.</li>
         </ul>
 
         <footer>
