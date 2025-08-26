@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changing Theme</title>
-    
+
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
     <style>
         h1 {
             text-align: center;
@@ -27,6 +26,7 @@
         }
         section {
             font-size: 1.2rem;
+            margin-top: 2rem; /* Add spacing between sections */
         }
         section h2 {
             text-align: center;
@@ -48,13 +48,22 @@
             background-color: black;
             color: white;
         }
+
+        /* Styling for the HTMX answer area */
+        .htmx-answer {
+            padding: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body class="light-theme">
     <header>
         <h1>Changing Themes</h1>
     </header>
-    
+
     <section>
         <h2>Using jQuery</h2>
         <p>We will create a jQuery code so if the user clicks on Light Theme button, you will apply the appropriate class to make the whole page lighter. The image below will also be changed to show the image of the sun! If the Dark Theme button is clicked, the image of the moon will be displayed and the appropriate class will be applied to the whole page as well</p>
@@ -62,16 +71,16 @@
             <img src="sun.jpeg" alt="cartoon sun" width="300" height="280">
         </figure>
     </section>
-    
+
     <footer>
         <button id="light">Light Theme</button>
         <button id="dark">Dark Theme</button>
     </footer>
-    
-    <section>
+
+    <section class="htmx-answer">
         <h2>HTMX Question</h2>
-        <p>Is it possible to have multiple trigger types in HTMX? For example, suppose that I want to trigger the request when a select element changes or loads, and then display the response in an area of my page with id="result". So, if I have the following select element, how would I use/code the htmx attributes for this scenario? Notice that the POST request is already coded.</p>
-        
+        <p>Is it possible to have multiple trigger types in HTMX? For example, suppose that I want to trigger the request when a select element (see the element below) changes or loads, and then display the response in an area of my page with id="result". So, if I have the following select element, how would I use/code the htmx attributes for this scenario? Notice that the POST request is already coded.</p>
+
         <select name="city" id="city" hx-post="/api/search" hx-trigger="change, load" hx-target="#result">
             <option>San Francisco</option>
             <option>New York</option>
@@ -82,14 +91,14 @@
         
         <p>Yes, it is possible to have multiple trigger types in HTMX by separating them with a comma within the **hx-trigger** attribute. The value "/api/search" represents the URL of the endpoint on your server that will handle the request.</p>
     </section>
-    
+
     <script>
     $(document).ready(function() {
         $("#light").on("click", function() {
             $("body").removeClass("dark-theme").addClass("light-theme");
             $("img").attr("src", "sun.jpeg");
         });
-    
+
         $("#dark").on("click", function() {
             $("body").removeClass("light-theme").addClass("dark-theme");
             $("img").attr("src", "moon.jpeg");
