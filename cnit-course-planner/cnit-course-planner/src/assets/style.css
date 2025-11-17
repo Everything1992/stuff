@@ -1,0 +1,71 @@
+/* Global styles used by both implementations */
+:root {
+  --bg: #f6f8fb;
+  --card: #fff;
+  --text: #0b1220;
+  --muted: #586069;
+  --accent: #2b7cff;
+  --danger: #ff5c5c;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* small utilities and app-level card */
+.app {
+  max-width: 760px;
+  margin: 36px auto;
+  padding: 26px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(10,15,30,0.06);
+}
+
+.app.dark {
+  --bg: #0b0f14;
+  --card: #0f1720;
+  --text: #dbeafe;
+  --muted: #9fb3cf;
+}
+
+/* header */
+.header { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+.header h1 { margin: 0; font-size: 28px; }
+.header h2 { margin: 6px 0 0; font-weight: 500; color: var(--muted); }
+
+/* controls */
+.filters { display:flex; gap:10px; margin-top:16px; margin-bottom:18px; }
+.filters button { border: none; padding:8px 12px; border-radius:8px; background:#eef3ff; cursor:pointer; }
+.filters button.active { background: var(--accent); color: white; }
+
+/* add row */
+.add-course { display:flex; gap:10px; margin-bottom:16px; }
+.add-course input { flex:1; padding:10px 12px; border-radius:8px; border:1px solid #e2e8f0; }
+.add-course button { background:var(--accent); color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; }
+
+/* list styles */
+.course-list { list-style:none; padding:0; margin:0; }
+.course-item { display:flex; align-items:center; justify-content:space-between; padding:12px 10px; border-bottom:1px solid #f0f0f5; }
+.course-row { display:flex; align-items:center; gap:12px; }
+.course-row input[type='checkbox'] { width:18px; height:18px; }
+.completed { text-decoration: line-through; color: gray; opacity:0.85; }
+.actions .delete { background:var(--danger); color:white; border:none; padding:7px 10px; border-radius:8px; cursor:pointer; }
+
+/* transition */
+.list-enter-from, .list-leave-to { opacity:0; transform: translateY(-8px) }
+.list-enter-active, .list-leave-active { transition: all 280ms cubic-bezier(.2,.9,.2,1) }
+
+/* footer */
+.footer { margin-top:18px; color:var(--muted); font-size:13px; }
+
+/* small responsive tweak */
+@media (max-width:640px){
+  .app { margin:18px; padding:18px; }
+}
