@@ -1,0 +1,11 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #fff;
+  --text: #0b1220;
+  --muted: #586069;
+  --accent: #2b7cff;
+  --danger: #ff5c5c;
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: Inter, Arial, sans-serif; background:var(--bg); color:var(--text); padding:0; }
+a { color:inherit; text-decoration:none; }
